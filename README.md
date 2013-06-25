@@ -1,0 +1,4 @@
+schema
+======
+
+Published XML schemas
