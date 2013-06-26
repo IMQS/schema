@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://www.imqs.co.za/sap/project"
-            xmlns="https://github.com/IMQS/schema/blob/master/sap/project"
+            xmlns="http://www.imqs.co.za/sap/project"
              version="1.0">
 
 	<xsd:element name="createRequest">
