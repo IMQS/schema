@@ -4,7 +4,7 @@
             xmlns="https://github.com/IMQS/schema/blob/master/sap/project"
              version="1.0">
 
-	<xsd:element name="create">
+	<xsd:element name="createRequest">
         <xsd:annotation>
             <xsd:documentation>IMQS WIP Project Creation Interface</xsd:documentation>
         </xsd:annotation>
