@@ -3,6 +3,26 @@
             targetNamespace="http://www.imqs.co.za/sap/project"
             xmlns="http://www.imqs.co.za/sap/project"
              version="1.0">
+             
+       <xsd:element name="createResponse">
+	       <xsd:annotation>
+	           <xsd:documentation>Response </xsd:documentation>
+	       </xsd:annotation>
+	       <xsd:complexType>
+	           <xsd:sequence>
+	               <xsd:element name="Error" minOccurs="0">
+	                   <xsd:annotation>
+	                       <xsd:documentation>Error message </xsd:documentation>
+	                   </xsd:annotation>
+	                   <xsd:simpleType>
+	                       <xsd:restriction base="xsd:string">
+	                           <xsd:maxLength value="250"/>
+	                       </xsd:restriction>
+	                   </xsd:simpleType>
+	               </xsd:element>
+	           </xsd:sequence>
+	       </xsd:complexType>
+	</xsd:element>
 
 	<xsd:element name="createRequest">
         <xsd:annotation>
