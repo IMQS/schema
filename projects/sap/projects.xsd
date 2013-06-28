@@ -7,7 +7,7 @@
 
 
     <xsd:import schemaLocation="project.xsd" namespace="http://www.imqs.co.za/projects/project"/>
-    <xsd:import schemaLocation="invoice.xsd" namespace="http://www.imqs.co.za/projects/invoice"/>
+    <xsd:import schemaLocation="transactions.xsd" namespace="http://www.imqs.co.za/projects/invoice"/>
 
     <xsd:element name="CreateResponse">
         <xsd:annotation>
