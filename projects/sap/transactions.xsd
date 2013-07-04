@@ -6,21 +6,23 @@
 
 
 
-    <xsd:complexType name="CreateTransactions">
+    <xsd:element name="CreateTransactions">
         <xsd:annotation>
             <xsd:documentation>IMQS - Capital Projects Transactions</xsd:documentation>
         </xsd:annotation>
-        <xsd:sequence>
-            <xsd:element name="Transactions" type="Transaction" maxOccurs="1410065407"/>
-        </xsd:sequence>
-    </xsd:complexType>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Transactions" type="Transaction" maxOccurs="1410065407"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
 
     <xsd:complexType name="Transaction">
         <xsd:annotation>
             <xsd:documentation>Invoice</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="Identity" minOccurs="1" type="InvoiceIdentity"/>
+            <xsd:element name="Identity" minOccurs="1" type="TransactionIdentity"/>
             <xsd:element name="LineItems" type="LineItem" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
@@ -31,15 +33,15 @@
         </xsd:annotation>
         <xsd:sequence>
 
-            <xsd:element name="Identity" minOccurs="1" type="InvoiceIdentity"/>
+            <xsd:element name="Identity" minOccurs="1" type="TransactionIdentity"/>
 
             <xsd:element id="GJAHR" name="FiscalYear" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>Fiscal Year</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
-                    <xsd:restriction base="xsd:date">
-                        <xsd:pattern value="YYYY"/>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="(\d{4})"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -61,18 +63,16 @@
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:date">
-                        <xsd:pattern value="YYYYMMDD"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
 
             <xsd:element id="BUDAT" name="PostingDate" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation>Posting Date</xsd:documentation>
+                    <xsd:documentation>Posting Date. Format YYYY-MM-DD</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:date">
-                        <xsd:pattern value="YYYYMMDD"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -190,6 +190,18 @@
                 </xsd:simpleType>
             </xsd:element>
 
+            <xsd:element name="Plant" id="WERKS" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
             <xsd:element name="CostElement" minOccurs="0" type="Cost"/>
 
             <xsd:element name="Vendor" minOccurs="0" type="Vendor"/>
@@ -293,7 +305,7 @@
         </xsd:sequence>
     </xsd:complexType>
 
-    <xsd:complexType name="InvoiceIdentity">
+    <xsd:complexType name="TransactionIdentity">
         <xsd:annotation>
             <xsd:documentation>Invoice</xsd:documentation>
         </xsd:annotation>

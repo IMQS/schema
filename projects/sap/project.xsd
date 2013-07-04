@@ -56,41 +56,37 @@
 			</xsd:element>
 			<xsd:element name="StartDate" id="PLFAZ" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Project planned start date</xsd:documentation>
+					<xsd:documentation>Project planned start date. Format YYYY-MM-DD</xsd:documentation>
 				</xsd:annotation>
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:date">
-                        <xsd:pattern value="YYYYMMDD"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element name="FinishDate" id="PLSEZ" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Project planned finish date</xsd:documentation>
+					<xsd:documentation>Project planned finish date. Format YYYY-MM-DD</xsd:documentation>
 				</xsd:annotation>
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:date">
-                        <xsd:pattern value="YYYYMMDD"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element name="ForecastStartDate" id="SPROG" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Forecast start date of project definition</xsd:documentation>
+					<xsd:documentation>Forecast start date of project definition. Format YYYY-MM-DD</xsd:documentation>
 				</xsd:annotation>
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:date">
-                        <xsd:pattern value="YYYYMMDD"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element name="ForecastFinishedDate" id="EPROG" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Forecast finish date for project definition</xsd:documentation>
+					<xsd:documentation>Forecast finish date for project definition. Format YYYY-MM-DD</xsd:documentation>
 				</xsd:annotation>
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:date">
-                        <xsd:pattern value="YYYYMMDD"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
@@ -121,21 +117,19 @@
 			</xsd:element>
 			<xsd:element name="DateCreate" id="ERDAT" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Date the project definition was created</xsd:documentation>
+					<xsd:documentation>Date the project definition was created. Format YYYY-MM-DD</xsd:documentation>
 				</xsd:annotation>
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:date">
-                        <xsd:pattern value="YYYYMMDD"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element name="DateChanged" id="AEDAT" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Date on which object was last changed</xsd:documentation>
+					<xsd:documentation>Date on which object was last changed. Format YYYY-MM-DD</xsd:documentation>
 				</xsd:annotation>
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:date">
-                        <xsd:pattern value="YYYYMMDD"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
