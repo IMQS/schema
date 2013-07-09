@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.imqs.co.za/projects"
+            xmlns="http://www.imqs.co.za/projects"
+            version="1.0">
+
+    <xsd:element name="CreatePlant">
+        <xsd:annotation>
+            <xsd:documentation>IMQS WIP Plant Creation Interface</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="plant" type="Plant"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="Plant">
+        <xsd:annotation>
+            <xsd:documentation>JW:EAM - Plant Download</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+
+            <xsd:element name="PlantCode" id="WERKS" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Plant</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="PlantName" id="NAME1" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Name</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="30"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+        </xsd:sequence>
+
+    </xsd:complexType>
+
+</xsd:schema>

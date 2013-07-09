@@ -6,6 +6,9 @@
 
     <xsd:include schemaLocation="project.xsd"/>
     <xsd:include schemaLocation="transactions.xsd"/>
+    <xsd:include schemaLocation="costcentre.xsd"/>
+    <xsd:include schemaLocation="plant.xsd"/>
+
 
     <xsd:element name="CreateResponse">
         <xsd:annotation>
