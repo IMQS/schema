@@ -4,13 +4,13 @@
             xmlns="http://www.imqs.co.za/projects"
             version="1.0">
 
-    <xsd:element name="CreatePlant">
+    <xsd:element name="CreatePlants">
         <xsd:annotation>
             <xsd:documentation>IMQS WIP Plant Creation Interface</xsd:documentation>
         </xsd:annotation>
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="plant" type="Plant"/>
+                <xsd:element name="plant" type="Plant" maxOccurs="1410065407"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

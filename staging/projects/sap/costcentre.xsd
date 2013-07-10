@@ -4,7 +4,7 @@
             xmlns="http://www.imqs.co.za/projects"
             version="1.0">
 
-    <xsd:element name="CreateCostCentre">
+    <xsd:element name="CreateCostCentres">
         <xsd:annotation>
             <xsd:documentation>IMQS WIP Cost Centre Creation Interface</xsd:documentation>
         </xsd:annotation>
