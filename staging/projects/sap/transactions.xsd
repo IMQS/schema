@@ -207,8 +207,9 @@
                     <xsd:documentation>IMQS Amount Excluding VAT, In SAP this is Total Value in Controlling Area Currency</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
-                    <xsd:restriction base="xsd:string">
-                        <xsd:maxLength value="17"/>
+                    <xsd:restriction base="xsd:decimal">
+                        <xsd:totalDigits value="17"/>
+                        <xsd:fractionDigits value="2"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
