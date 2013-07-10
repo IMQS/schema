@@ -24,7 +24,7 @@
 
         <xsd:sequence>
 
-        <xsd:element name="CostCentreCode" id="KOSTL" minOccurs="0">
+        <xsd:element name="CostCentreCode" id="KOSTL" minOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                    Cost Centre Code
@@ -50,28 +50,26 @@
             </xsd:simpleType>
         </xsd:element>
 
-        <xsd:element name="ValidToDate" id="DATBI" minOccurs="0">
+        <xsd:element name="ValidToDate" id="DATBI" minOccurs="1">
             <xsd:annotation>
                 <xsd:documentation>
                     Date till the Cost Centre is no longer valid
                 </xsd:documentation>
             </xsd:annotation>
             <xsd:simpleType>
-                <xsd:restriction base="xsd:string">
-                    <xsd:maxLength value="8"/>
+                <xsd:restriction base="xsd:date">
                 </xsd:restriction>
             </xsd:simpleType>
         </xsd:element>
 
-        <xsd:element name="ValidFromDate" id="DATAB" minOccurs="0">
+        <xsd:element name="ValidFromDate" id="DATAB" minOccurs="1">
             <xsd:annotation>
                 <xsd:documentation>
                     Date from which the Cost Center is valid
                 </xsd:documentation>
             </xsd:annotation>
             <xsd:simpleType>
-                <xsd:restriction base="xsd:string">
-                    <xsd:maxLength value="8"/>
+                <xsd:restriction base="xsd:date">
                 </xsd:restriction>
             </xsd:simpleType>
         </xsd:element>

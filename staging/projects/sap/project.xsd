@@ -24,7 +24,7 @@
             </xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="ProjectDefinition" id="PSPID" minOccurs="0">
+			<xsd:element name="ProjectDefinition" id="PSPID" minOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>Unique number for the project, can be changed </xsd:documentation>
 				</xsd:annotation>
@@ -44,7 +44,7 @@
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="ProjectNumber" id="OBJNR" minOccurs="0">
+			<xsd:element name="ProjectNumber" id="OBJNR" minOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>SAP internal object number for the project, cannot be changed</xsd:documentation>
 				</xsd:annotation>

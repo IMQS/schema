@@ -21,7 +21,7 @@
         </xsd:annotation>
         <xsd:sequence>
 
-            <xsd:element name="PlantCode" id="WERKS" minOccurs="0">
+            <xsd:element name="PlantCode" id="WERKS" minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>Plant</xsd:documentation>
                 </xsd:annotation>
@@ -32,7 +32,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="PlantName" id="NAME1" minOccurs="0">
+            <xsd:element name="PlantName" id="NAME1" minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>Name</xsd:documentation>
                 </xsd:annotation>
