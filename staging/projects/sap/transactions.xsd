@@ -202,7 +202,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element id="WKGBTR" name="Amount" minOccurs="0">
+            <xsd:element id="WKGBTR" name="Amount" minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>IMQS Amount Excluding VAT, In SAP this is Total Value in Controlling Area Currency</xsd:documentation>
                 </xsd:annotation>
