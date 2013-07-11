@@ -303,7 +303,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element id="EBTXT" name="Text" minOccurs="0">
+            <xsd:element id="EBTXT" name="PDText" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>Purchase Order Text From the Purchasing Document</xsd:documentation>
                 </xsd:annotation>
