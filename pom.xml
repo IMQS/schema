@@ -52,7 +52,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <schemaDirectory>${project.basedir}/staging/projects/sap</schemaDirectory>
+                    <schemaDirectory>${project.basedir}/projects/sap</schemaDirectory>
                 </configuration>
             </plugin>
         </plugins>

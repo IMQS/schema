@@ -2,10 +2,13 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://www.imqs.co.za/projects"
             xmlns="http://www.imqs.co.za/projects"
-             version="1.0">
+            version="2.0">
 
     <xsd:include schemaLocation="project.xsd"/>
     <xsd:include schemaLocation="transactions.xsd"/>
+    <xsd:include schemaLocation="costcentre.xsd"/>
+    <xsd:include schemaLocation="plant.xsd"/>
+
 
     <xsd:element name="CreateResponse">
         <xsd:annotation>

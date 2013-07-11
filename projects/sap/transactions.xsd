@@ -2,9 +2,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://www.imqs.co.za/projects"
             xmlns="http://www.imqs.co.za/projects"
-        version="1.0">
-
-
+            version="2.0">
 
     <xsd:element name="CreateTransactions">
         <xsd:annotation>
@@ -67,7 +65,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element id="BUDAT" name="PostingDate" minOccurs="0">
+            <xsd:element id="BUDAT" name="PostingDate" minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>Posting Date. Format YYYY-MM-DD</xsd:documentation>
                 </xsd:annotation>
@@ -132,7 +130,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element id="BUZEI" name="PostingRow" minOccurs="0">
+            <xsd:element id="BUZEI" name="PostingRow" minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>Posting row</xsd:documentation>
                 </xsd:annotation>
@@ -198,6 +196,18 @@
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element id="WKGBTR" name="Amount" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>IMQS Amount Excluding VAT, In SAP this is Total Value in Controlling Area Currency</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                        <xsd:totalDigits value="17"/>
+                        <xsd:fractionDigits value="2"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -311,7 +321,7 @@
         </xsd:annotation>
         <xsd:sequence>
 
-            <xsd:element id="BELNR" name="DocumentNumber" minOccurs="0">
+            <xsd:element id="BELNR" name="DocumentNumber" minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>Document Number</xsd:documentation>
                 </xsd:annotation>
@@ -322,7 +332,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element id="PSPID" name="ProjectDefinition" minOccurs="0">
+            <xsd:element id="PSPID" name="ProjectDefinition" minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>Project Definition</xsd:documentation>
                 </xsd:annotation>
