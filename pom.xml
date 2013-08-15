@@ -14,7 +14,7 @@
     <groupId>za.co.imqs.schema</groupId>
     <artifactId>schema</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar  </packaging>
+    <packaging>jar</packaging>
 
     <dependencies>
 
@@ -27,6 +27,7 @@
     </dependencies>
 
     <build>
+
         <pluginManagement>
             <plugins>
                 <!-- Need Java 5, which is the default since v2.3 of the maven-compiler-plugin. -->
@@ -37,23 +38,40 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxb2-maven-plugin</artifactId>
                 <version>1.5</version>
                 <executions>
+
                     <execution>
-                        <phase>test</phase>
-                        <id>xjc</id>
+                        <phase>test-compile</phase>
+                        <id>published</id>
                         <goals>
                             <goal>xjc</goal>
                         </goals>
+                        <configuration>
+                            <schemaDirectory>${project.basedir}/projects/sap</schemaDirectory>
+                            <clearOutputDir>true</clearOutputDir>
+                        </configuration>
                     </execution>
+
+                    <execution>
+                        <phase>test</phase>
+                        <id>development</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <schemaDirectory>${project.basedir}/staging/projects/sap</schemaDirectory>
+                            <clearOutputDir>true</clearOutputDir>
+                        </configuration>
+                    </execution>
+
                 </executions>
-                <configuration>
-                    <schemaDirectory>${project.basedir}/projects/sap</schemaDirectory>
-                </configuration>
+
             </plugin>
         </plugins>
     </build>

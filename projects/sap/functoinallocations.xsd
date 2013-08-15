@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.imqs.co.za/projects"
+            xmlns="http://www.imqs.co.za/projects"
+            version="1.0">
+
+    <xsd:element name="FunctionalLocationList">
+        <xsd:annotation>
+            <xsd:documentation>List of Functional Locations</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="FunctionalLocation" type="FunctionalLocation" minOccurs="0" maxOccurs="100000"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="FunctionalLocation">
+        <xsd:annotation>
+            <xsd:documentation>Functional Location</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element  name="Label" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation> This data element identifies the hierarchy mask applicable for this specific functional location. The “-“indicates a branch from the parent hierarchy.
+                                        Example JWP-INF-OPB
+                                        INF-OPB is a branch of JWP and further more OPB is a branch of INF
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="150"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element  name="Description" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation> This data element allows for a brief description of the functional location
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="150"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element  name="MaintPlant" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation> This data element is a 4 digit code which uniquely identifies the maintenance plant for a specific functional location.
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element  name="CostCenter" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>This data element is a string of 10 characters in length which identifies the cost center for a specific functional location
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="10"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+        </xsd:all>
+    </xsd:complexType>
+
+
+</xsd:schema>
