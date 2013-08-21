@@ -8,6 +8,7 @@
     <xsd:include schemaLocation="transactions.xsd"/>
     <xsd:include schemaLocation="costcentre.xsd"/>
     <xsd:include schemaLocation="plant.xsd"/>
+    <xsd:include schemaLocation="functionallocations.xsd"/>
 
 
     <xsd:element name="CreateResponse">
