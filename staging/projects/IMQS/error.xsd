@@ -12,6 +12,9 @@
             <xsd:sequence>
                 <xsd:element name="TimeStamp" minOccurs="0"  maxOccurs="1">
                     <xsd:simpleType>
+                        <xsd:annotation>
+                            <xsd:documentation>e.g. 2011-01-01T09:00:00</xsd:documentation>
+                        </xsd:annotation>
                         <xsd:restriction base="xsd:dateTime"/>
                     </xsd:simpleType>
                 </xsd:element>
