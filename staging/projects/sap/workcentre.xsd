@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.imqs.co.za/projects"
+            xmlns="http://www.imqs.co.za/projects"
+            version="1.0">
+
+    <xsd:element name="WorkCentreList">
+        <xsd:annotation>
+            <xsd:documentation>List of Work Centres</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="WorkCenter" type="WorkCenter" minOccurs="0" maxOccurs="100000"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="WorkCenter">
+        <xsd:annotation>
+            <xsd:documentation>Work Center</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+            <xsd:element  name="ObjectID" id="OJBID" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation> This data element identifies is the object identification of the work center resource</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="8"/>
+                        <xsd:minLength value="8"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element  name="StartDate" id="BEGDA" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>This data element allows for the capturing of the start date of the work center
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:date"/>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element  name="EndDate" id="ENDDA" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>This data element allows for the capturing of the end date of the work center</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:date"/>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element  name="WorkCenter" id="ARBPL" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>This data element allows for the capturing of the work center code</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="8"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element  name="Plant" id="WERKS" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation> This data element is a 4 digit code which uniquely identifies the maintenance plant for a specific functional location.
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                        <xsd:minLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element  name="Description" id="KTEXT" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>This data element is a string of 40 characters in length which briefly describes the work center specified.</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+        </xsd:all>
+    </xsd:complexType>
+
+
+</xsd:schema>
