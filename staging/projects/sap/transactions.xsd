@@ -12,7 +12,7 @@
         </xsd:annotation>
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="Transactions" type="Transaction" maxOccurs="1410065407"/>
+                <xsd:element name="Transactions" type="Transaction" minOccurs="0" maxOccurs="100000"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

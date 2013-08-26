@@ -10,7 +10,7 @@
         </xsd:annotation>
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="costcentre" type="CostCentre" maxOccurs="1410065407"/>
+                <xsd:element name="costcentre" type="CostCentre"  minOccurs="0" maxOccurs="100000"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

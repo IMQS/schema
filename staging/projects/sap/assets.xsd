@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.imqs.co.za/projects"
+            xmlns="http://www.imqs.co.za/projects"
+            version="1.0">
+
+    <xsd:element name="ConfirmedAssetList">
+        <xsd:annotation>
+            <xsd:documentation>IMQS Asset Confirmation Interface</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ConfirmedAsset" type="ConfirmedAsset" minOccurs="0" maxOccurs="100000"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="ConfirmedAsset">
+        <xsd:annotation>
+            <xsd:documentation>
+                SAP Asset to create in IMQS, during conformation
+            </xsd:documentation>
+        </xsd:annotation>
+
+        <xsd:sequence>
+
+        <xsd:element name="ComponentID"  minOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                   This data element identifies the IMQS unique ComponentID provided through the Asset Creation Web service (IMQS->SAP FI) applicable for this specific asset.
+                   Example INF_BDST_DEP11435_BDST_AIRC4
+               </xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:string">
+                    <xsd:maxLength value="150"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:element>
+
+        <xsd:element name="AssetNumber"  minOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                   This data element provides the newly created SAP asset number from SAP FI.
+               </xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="12"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:element>
+
+        <xsd:element name="EquipNumber" minOccurs="1">
+            <xsd:annotation>
+                <xsd:documentation>
+                    This data element provides the newly created SAP equipment number from SAP PM.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:maxLength value="18"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:element>
+
+        <xsd:element name="BatchID"  minOccurs="1">
+            <xsd:annotation>
+                <xsd:documentation>
+                    This data element is a reference code to the asset batch delivered in the Asset Creation Web service, which uniquely identifies the IMQS unbundled assets.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:maxLength value="12"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:element>
+
+            <xsd:element name="Status" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        This data element is a string of 1 characters in length which indicates if the asset commited in SAP correctly.
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="1"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+        </xsd:sequence>
+
+    </xsd:complexType>
+
+</xsd:schema>
