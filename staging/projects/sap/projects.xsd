@@ -10,6 +10,7 @@
     <xsd:include schemaLocation="plant.xsd"/>
     <xsd:include schemaLocation="functionallocations.xsd"/>
     <xsd:include schemaLocation="workcentre.xsd"/>
+    <xsd:include schemaLocation="assets.xsd"/>
 
 
     <xsd:element name="CreateResponse">
