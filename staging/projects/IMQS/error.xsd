@@ -23,6 +23,11 @@
                         <xsd:restriction base="xsd:string"></xsd:restriction>
                     </xsd:simpleType>
                 </xsd:element>
+                <xsd:element name="StackTrace" minOccurs="0" maxOccurs="1">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string"></xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
                 <xsd:element name="Payload" minOccurs="1" maxOccurs="1">
                     <xsd:simpleType>
                         <xsd:restriction base="xsd:string"></xsd:restriction>
