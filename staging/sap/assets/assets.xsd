@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.imqs.co.za/projects"
-            xmlns="http://www.imqs.co.za/projects"
-             version="1.0">
+            targetNamespace="http://www.imqs.co.za/assets"
+            xmlns="http://www.imqs.co.za/assets"
+            version="1.0">
 
-    <xsd:include schemaLocation="project.xsd"/>
-    <xsd:include schemaLocation="transactions.xsd"/>
-    <xsd:include schemaLocation="costcentre.xsd"/>
-    <xsd:include schemaLocation="plant.xsd"/>
-    <xsd:include schemaLocation="functionallocations.xsd"/>
-    <xsd:include schemaLocation="workcentre.xsd"/>
-    <xsd:include schemaLocation="assets.xsd"/>
-
+    <xsd:include schemaLocation="confirmedassetlist.xsd"/>
 
     <xsd:element name="CreateResponse">
         <xsd:annotation>
-            <xsd:documentation>Response </xsd:documentation>
+            <xsd:documentation>Response for asset confirmation</xsd:documentation>
         </xsd:annotation>
         <xsd:complexType>
             <xsd:sequence>
@@ -32,8 +25,5 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-
-
-
 
 </xsd:schema>
