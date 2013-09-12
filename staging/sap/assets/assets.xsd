@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.imqs.co.za/assets" xmlns="http://www.imqs.co.za/assets" version="1.0">
     <xsd:include schemaLocation="confirmedassetlist.xsd"/>
-    <xsd:include schemaLocation="jwater-assets.xsd"/>
     <xsd:element name="CreateResponse">
         <xsd:annotation>
             <xsd:documentation>Response for asset confirmation</xsd:documentation>
