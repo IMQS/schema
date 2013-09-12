@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema targetNamespace="http://www.imqs.co.za/assets" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.imqs.co.za/assets">
+<xsd:schema targetNamespace="http://joburgwater.co.za/IMQS/AssetRecognition" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://joburgwater.co.za/IMQS/AssetRecognition">
     <xsd:element name="NewAssetsAndEquipment" type="RecordsType"/>
     <xsd:element name="NewAssetAndEquipment" type="RecordType"/>
     <xsd:complexType name="AssetDetailType">
