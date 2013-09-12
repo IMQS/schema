@@ -92,7 +92,7 @@
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:date">
-                        <xsd:pattern value="YYYYMMDD"/>
+                        <!--<xsd:pattern value="YYYYMMDD"/>-->
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -276,7 +276,7 @@
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
-                        <xsd:pattern value="00"/>
+                        <!--<xsd:pattern value="00"/>-->
                         <xsd:length value="2"/>
                     </xsd:restriction>
                 </xsd:simpleType>
