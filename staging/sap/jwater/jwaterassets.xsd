@@ -4,7 +4,7 @@
     <xsd:element name="NewAssetAndEquipment" type="RecordType"/>
     <xsd:complexType name="AssetDetailType">
         <xsd:annotation>
-            <xsd:appinfo source="http://sap.com/xi/VersionID">09240a95f91511e297560000005ff7c6</xsd:appinfo>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">3b8054e51eaa11e3adf80000005ff7c6</xsd:appinfo>
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="companyCode">
@@ -85,16 +85,11 @@
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
-            <xsd:element name="capitalisationDate">
+            <xsd:element name="capitalisationDate" type="xsd:date">
                 <xsd:annotation>
                     <xsd:appinfo source="http://sap.com/xi/TextID">c299c31ae32511e2b562e337c0a86e19</xsd:appinfo>
                     <xsd:documentation>Asset Capitalisation Date</xsd:documentation>
                 </xsd:annotation>
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:date">
-                        <!--<xsd:pattern value="YYYYMMDD"/>-->
-                    </xsd:restriction>
-                </xsd:simpleType>
             </xsd:element>
             <xsd:element name="costCentre">
                 <xsd:annotation>
@@ -118,7 +113,7 @@
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
-            <xsd:element name="accountingGroup">
+            <xsd:element name="accountingGroup" minOccurs="0">
                 <xsd:annotation>
                     <xsd:appinfo source="http://sap.com/xi/TextID">ef347ca8e32611e2909de337c0a86e19</xsd:appinfo>
                     <xsd:documentation>Accounting Group</xsd:documentation>
@@ -129,7 +124,7 @@
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
-            <xsd:element name="category">
+            <xsd:element name="category" minOccurs="0">
                 <xsd:annotation>
                     <xsd:appinfo source="http://sap.com/xi/TextID">ef347ca9e32611e2b8d3e337c0a86e19</xsd:appinfo>
                     <xsd:documentation>Asset Category</xsd:documentation>
@@ -140,7 +135,7 @@
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
-            <xsd:element name="subCategory">
+            <xsd:element name="subCategory" minOccurs="0">
                 <xsd:annotation>
                     <xsd:appinfo source="http://sap.com/xi/TextID">ef34bbb6e32611e2ba1ce337c0a86e19</xsd:appinfo>
                     <xsd:documentation>Asset Subcategory</xsd:documentation>
@@ -151,7 +146,7 @@
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
-            <xsd:element name="groupType">
+            <xsd:element name="groupType" minOccurs="0">
                 <xsd:annotation>
                     <xsd:appinfo source="http://sap.com/xi/TextID">ef34bbb7e32611e2a420e337c0a86e19</xsd:appinfo>
                     <xsd:documentation>Asset Group Type</xsd:documentation>
@@ -162,7 +157,7 @@
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
-            <xsd:element name="componentType">
+            <xsd:element name="componentType" minOccurs="0">
                 <xsd:annotation>
                     <xsd:appinfo source="http://sap.com/xi/TextID">d223cf30e3b611e2c8eddfeec0a86e19</xsd:appinfo>
                     <xsd:documentation>Component Type</xsd:documentation>
@@ -239,14 +234,14 @@
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
-            <xsd:element name="batchID">
+            <xsd:element name="projectID" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:appinfo source="http://sap.com/xi/TextID">f7b43f7df84711e29a0ac64ec0a86e35</xsd:appinfo>
-                    <xsd:documentation>IMQS Batch ID</xsd:documentation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">059fd0d4156711e393ecd691c0a86e2e</xsd:appinfo>
+                    <xsd:documentation>Project ID</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
-                        <xsd:maxLength value="12"/>
+                        <xsd:maxLength value="22"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -266,7 +261,7 @@
     <xsd:complexType name="DepreciationDetailType">
         <xsd:annotation>
             <xsd:documentation xml:lang="EN">Asset Depreciation Definition</xsd:documentation>
-            <xsd:appinfo source="http://sap.com/xi/VersionID">d5fc4170f85811e280950000005ff7c6</xsd:appinfo>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">e751def51ea911e3c3c00000005ff7c6</xsd:appinfo>
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="depreciationArea">
@@ -275,9 +270,8 @@
                     <xsd:documentation>Real Depreciation Area</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
-                    <xsd:restriction base="xsd:string">
-                        <!--<xsd:pattern value="00"/>-->
-                        <xsd:length value="2"/>
+                    <xsd:restriction base="xsd:integer">
+                        <xsd:totalDigits value="2"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -298,7 +292,7 @@
                     <xsd:documentation>Useful Life: Number Of Years</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
-                    <xsd:restriction base="xsd:int">
+                    <xsd:restriction base="xsd:integer">
                         <xsd:totalDigits value="3"/>
                     </xsd:restriction>
                 </xsd:simpleType>
@@ -309,7 +303,7 @@
                     <xsd:documentation>Useful Life: Number Of Periods</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
-                    <xsd:restriction base="xsd:int">
+                    <xsd:restriction base="xsd:integer">
                         <xsd:totalDigits value="3"/>
                     </xsd:restriction>
                 </xsd:simpleType>
@@ -317,13 +311,25 @@
             <xsd:element name="startDate" type="xsd:date">
                 <xsd:annotation>
                     <xsd:appinfo source="http://sap.com/xi/TextID">7c1acea1e31e11e2c83ff963c0a86e19</xsd:appinfo>
-                    <xsd:documentation>Depreciation Calculation Date</xsd:documentation>
+                    <xsd:documentation>Depreciation Calculation Date (YYYY-MM-DD)</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
             <xsd:element name="amount">
                 <xsd:annotation>
                     <xsd:appinfo source="http://sap.com/xi/TextID">7c1acea2e31e11e2990cf963c0a86e19</xsd:appinfo>
                     <xsd:documentation>Amount Posted</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                        <xsd:totalDigits value="23"/>
+                        <xsd:fractionDigits value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="scrapValue" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">e3225831156711e38c5fd691c0a86e2e</xsd:appinfo>
+                    <xsd:documentation>Asset Scrap Value</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:decimal">
@@ -348,10 +354,14 @@
     </xsd:complexType>
     <xsd:complexType name="EquipmentDetailType">
         <xsd:annotation>
-            <xsd:appinfo source="http://sap.com/xi/VersionID">b9edf836f84111e2a44b0000005ff7c6</xsd:appinfo>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">126cde7c1eaa11e3857f0000005ff7c6</xsd:appinfo>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="externalNumber">
+            <xsd:element name="externalNumber" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd5468fb7c11e2a724eda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Equipment Number</xsd:documentation>
+                </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:maxLength value="18"/>
@@ -359,6 +369,10 @@
                 </xsd:simpleType>
             </xsd:element>
             <xsd:element name="equipmentCategory">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd5469fb7c11e2a5d2eda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Equipment Category</xsd:documentation>
+                </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:length value="1"/>
@@ -366,6 +380,10 @@
                 </xsd:simpleType>
             </xsd:element>
             <xsd:element name="description">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd546afb7c11e2c168eda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Description of Technical Object</xsd:documentation>
+                </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:maxLength value="40"/>
@@ -373,14 +391,27 @@
                 </xsd:simpleType>
             </xsd:element>
             <xsd:element name="objectType">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd546bfb7c11e28d2eeda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Type Of Technical Object</xsd:documentation>
+                </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:maxLength value="10"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
-            <xsd:element name="startDate" type="xsd:date"/>
-            <xsd:element name="componentID">
+            <xsd:element name="startDate" type="xsd:date">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd7d17fb7c11e2afd1eda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Start-up Date of the Technical Object (YYYY-MM-DD)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="componentID" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd7d18fb7c11e2b18eeda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Component ID</xsd:documentation>
+                </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:maxLength value="40"/>
@@ -388,6 +419,10 @@
                 </xsd:simpleType>
             </xsd:element>
             <xsd:element name="maintenancePlant">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd7d19fb7c11e297d8eda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Maintenance Plant</xsd:documentation>
+                </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:maxLength value="4"/>
@@ -395,6 +430,10 @@
                 </xsd:simpleType>
             </xsd:element>
             <xsd:element name="assetNumber" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd7d1afb7c11e280f3eda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Main Asset Number</xsd:documentation>
+                </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:maxLength value="12"/>
@@ -402,6 +441,10 @@
                 </xsd:simpleType>
             </xsd:element>
             <xsd:element name="costCentre">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd7d1bfb7c11e2839eeda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Cost Centre</xsd:documentation>
+                </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:maxLength value="10"/>
@@ -409,6 +452,10 @@
                 </xsd:simpleType>
             </xsd:element>
             <xsd:element name="workCentre">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd7d1cfb7c11e28a0feda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Object ID of the Work Centre</xsd:documentation>
+                </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:maxLength value="8"/>
@@ -416,6 +463,10 @@
                 </xsd:simpleType>
             </xsd:element>
             <xsd:element name="functionalLocationLabel">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">87fd7d1dfb7c11e2cca1eda0c0a86e34</xsd:appinfo>
+                    <xsd:documentation>Functional Location Label</xsd:documentation>
+                </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:maxLength value="40"/>
