@@ -46,27 +46,67 @@
                 <version>1.5</version>
                 <executions>
 
+                    <!--<execution>-->
+                        <!--<phase>test-compile</phase>-->
+                        <!--<id>published</id>-->
+                        <!--<goals>-->
+                            <!--<goal>xjc</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<schemaDirectory>${project.basedir}/projects/sap</schemaDirectory>-->
+                            <!--<clearOutputDir>true</clearOutputDir>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+
                     <execution>
-                        <phase>test-compile</phase>
-                        <id>published</id>
+                        <phase>test</phase>
+                        <id>projects</id>
                         <goals>
                             <goal>xjc</goal>
                         </goals>
                         <configuration>
-                            <schemaDirectory>${project.basedir}/projects/sap</schemaDirectory>
-                            <clearOutputDir>true</clearOutputDir>
+                            <schemaDirectory>${project.basedir}/staging/sap/projects</schemaDirectory>
+                            <clearOutputDir>false</clearOutputDir>
+                            <staleFile>${project.build.directory}/generated-sources/jaxb/.projects</staleFile>
                         </configuration>
                     </execution>
 
                     <execution>
                         <phase>test</phase>
-                        <id>development</id>
+                        <id>jwater</id>
                         <goals>
                             <goal>xjc</goal>
                         </goals>
                         <configuration>
-                            <schemaDirectory>${project.basedir}/staging/projects/sap</schemaDirectory>
-                            <clearOutputDir>true</clearOutputDir>
+                            <schemaDirectory>${project.basedir}/staging/sap/jwater</schemaDirectory>
+                            <clearOutputDir>false</clearOutputDir>
+                            <staleFile>${project.build.directory}/generated-sources/jaxb/.jwater</staleFile>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <phase>test</phase>
+                        <id>assets</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <schemaDirectory>${project.basedir}/staging/sap/assets</schemaDirectory>
+                            <clearOutputDir>false</clearOutputDir>
+                            <staleFile>${project.build.directory}/generated-sources/jaxb/.assets</staleFile>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <phase>test</phase>
+                        <id>error</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <schemaDirectory>${project.basedir}/staging/sap/IMQS</schemaDirectory>
+                            <clearOutputDir>false</clearOutputDir>
+                            <staleFile>target/generated-sources/jaxb/.error</staleFile>
                         </configuration>
                     </execution>
 

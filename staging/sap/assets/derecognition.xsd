@@ -1,81 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.imqs.co.za/projects"
-            xmlns="http://www.imqs.co.za/projects"
-            version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.imqs.co.za/assets" xmlns="http://www.imqs.co.za/assets" version="1.0">
 
-    <xsd:element name="CreateCostCentres">
+    <xsd:element name="DerecogEquipList">
         <xsd:annotation>
-            <xsd:documentation>IMQS WIP Cost Centre Creation Interface</xsd:documentation>
+            <xsd:documentation>IMQS Asset Update Interface</xsd:documentation>
         </xsd:annotation>
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="costcentre" type="CostCentre" maxOccurs="1410065407"/>
+                <xsd:element name="DerecogEquip" type="DerecogEquip" minOccurs="0" maxOccurs="100000"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 
-    <xsd:complexType name="CostCentre">
+    <xsd:complexType name="DerecogEquip">
         <xsd:annotation>
             <xsd:documentation>
-                IMQS WIP Cost Centre
+                SAP De-recognitions to Update in IMQS
             </xsd:documentation>
         </xsd:annotation>
 
         <xsd:sequence>
 
-            <xsd:element name="CostCentreCode" id="KOSTL" minOccurs="1">
+            <xsd:element name="EquipmentNr"  minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>
-                        Cost Centre Code
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
-                        <xsd:maxLength value="10"/>
+                        <xsd:minLength value="1"/>
+                        <xsd:maxLength value="8"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="CostCentreDescription" id="LTEXT" minOccurs="0">
+            <xsd:element name="Description"  minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>
-                        Cost Centre Description
+                        Capitalization date – IMQS take on date
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="1"/>
+                        <xsd:maxLength value="8"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="Date"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:date">
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="FunctionalLocation"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="3"/>
                         <xsd:maxLength value="40"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="ValidToDate" id="DATBI" minOccurs="1">
-                <xsd:annotation>
-                    <xsd:documentation>
-                        Date till the Cost Centre is no longer valid
-                    </xsd:documentation>
-                </xsd:annotation>
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:date">
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
-
-            <xsd:element name="ValidFromDate" id="DATAB" minOccurs="1">
-                <xsd:annotation>
-                    <xsd:documentation>
-                        Date from which the Cost Center is valid
-                    </xsd:documentation>
-                </xsd:annotation>
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:date">
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
 
         </xsd:sequence>
 
     </xsd:complexType>
+
 
 </xsd:schema>
