@@ -7,6 +7,7 @@
         xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
         elementFormDefault="unqualified"
         attributeFormDefault="unqualified"
+        version="1.0">
 
     <xsd:element name="AssetUpdateList">
         <xsd:annotation>
