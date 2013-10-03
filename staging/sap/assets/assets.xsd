@@ -12,7 +12,6 @@
     <xsd:include schemaLocation="confirmedassetlist.xsd"/>
     <xsd:include schemaLocation="derecognition.xsd"/>
     <xsd:include schemaLocation="dismantle.xsd"/>
-    <xsd:include schemaLocation="update.xsd"/>
 
     <xsd:element name="CreateResponse">
         <xsd:annotation>
