@@ -1,7 +1,10 @@
 <xsd:schema targetNamespace="http://joburgwater.co.za/IMQS/AssetRecognition"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://joburgwater.co.za/IMQS/AssetRecognition">
+
     <xsd:element name="NewAssetsAndEquipment" type="RecordsType"/>
+
     <xsd:element name="NewAssetAndEquipment" type="RecordType"/>
+
     <xsd:complexType name="AssetDetailType">
         <xsd:annotation>
             <xsd:appinfo source="http://sap.com/xi/VersionID">3b8054e51eaa11e3adf80000005ff7c6</xsd:appinfo>
@@ -282,6 +285,7 @@
             </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
+
     <xsd:complexType name="DepreciationDetailType">
         <xsd:annotation>
             <xsd:documentation xml:lang="EN">Asset Depreciation Definition</xsd:documentation>
@@ -384,6 +388,7 @@
             </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
+
     <xsd:complexType name="EquipmentDetailType">
         <xsd:annotation>
             <xsd:appinfo source="http://sap.com/xi/VersionID">d2a76e291ed011e38d180000005ff7c6</xsd:appinfo>
@@ -542,6 +547,7 @@
             </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
+
     <xsd:complexType name="RecordsType">
         <xsd:annotation>
             <xsd:appinfo source="http://sap.com/xi/VersionID">44b64768f91611e2bd840000005ff7c6</xsd:appinfo>
@@ -566,6 +572,7 @@
             </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
+
     <xsd:complexType name="RecordType">
         <xsd:annotation>
             <xsd:appinfo source="http://sap.com/xi/VersionID">288f8b29f91611e2955f0000005ff7c6</xsd:appinfo>
