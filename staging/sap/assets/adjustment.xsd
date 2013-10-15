@@ -145,11 +145,12 @@
 
         <xsd:sequence>
 
-            <xsd:element name="AssetMainNumber" minOccurs="0">
+            <xsd:element name="ClientAssetId" minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>
                         This data element uniquely identifies a batch of asset details submitted to SAP.
                         SAP Asset ID – IMQS client Asset ID, linking data between transaction and header segment.
+                        Maps form the AssetMainNumber in SAP
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
@@ -172,7 +173,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="ComponentId"  minOccurs="1">
+            <xsd:element name="ComponentId"  minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
                         Maps from the Sap Asset Description Field
