@@ -1,0 +1,84 @@
+<xsd:schema targetNamespace="http://joburgwater.co.za/IMQS/AssetDerecognition"
+            xmlns="http://joburgwater.co.za/IMQS/AssetDerecognition"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="AssetDerecognitionConfirmation" type="AssetsType"/>
+    <xsd:complexType name="AssetsType">
+        <xsd:annotation>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">10bb23f1157711e3c6620000005ff7c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="transmissionID">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:long">
+                        <xsd:totalDigits value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="asset" type="AssetDetailType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AssetDetailType">
+        <xsd:annotation>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">d0df7e30157611e3cce90000005ff7c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="companyCode">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">e97fe9b4157611e39e54d691c0a86e2e
+                    </xsd:appinfo>
+                    <xsd:documentation>Company Code</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="mainAssetNo">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">e97fe9b5157611e3c350d691c0a86e2e
+                    </xsd:appinfo>
+                    <xsd:documentation>Main Asset Number</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="subAssetNo">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">e97fe9b6157611e3b158d691c0a86e2e
+                    </xsd:appinfo>
+                    <xsd:documentation>Sub-Asset Number</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="documentDate" type="xsd:date">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">e98022c4157611e3a54cd691c0a86e2e
+                    </xsd:appinfo>
+                    <xsd:documentation>Date</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="postingDate" type="xsd:date">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">e98022c5157611e3b879d691c0a86e2e
+                    </xsd:appinfo>
+                    <xsd:documentation>Posting Date</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="assetValueDate" type="xsd:date">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">e98022c6157611e3b3d4d691c0a86e2e
+                    </xsd:appinfo>
+                    <xsd:documentation>Asset Value Date</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

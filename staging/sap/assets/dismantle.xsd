@@ -32,6 +32,7 @@
             <xsd:element name="EquipmentNr"  minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>
+                        In IM
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
@@ -45,7 +46,7 @@
             <xsd:element name="Description"  minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>
-                        Capitalization date – IMQS take on date
+
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
