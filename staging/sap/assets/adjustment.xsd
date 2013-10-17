@@ -161,7 +161,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="AssetCapitalisation" minOccurs="0">
+            <xsd:element name="AssetCapitalisation" minOccurs="0" nillable="false">
                 <xsd:annotation>
                     <xsd:documentation>
 
@@ -169,6 +169,8 @@
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:date">
+                        <xsd:maxLength value="8"/>
+                        <xsd:minLength value="8"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -195,6 +197,8 @@
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:date">
+                        <xsd:maxLength value="8"/>
+                        <xsd:minLength value="8"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -222,6 +226,8 @@
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:date">
+                        <xsd:maxLength value="8"/>
+                        <xsd:minLength value="8"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -235,6 +241,7 @@
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:decimal">
                         <xsd:fractionDigits value="2"/>
+                        <xsd:minLength value="1"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -248,6 +255,7 @@
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:decimal">
                         <xsd:fractionDigits value="2"/>
+                        <xsd:minLength value="1"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -262,6 +270,7 @@
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:decimal">
                         <xsd:fractionDigits value="2"/>
+                        <xsd:minLength value="1"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
