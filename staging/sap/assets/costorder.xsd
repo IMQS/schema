@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        jxb:version="2.0"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.imqs.co.za/assets"
+        xmlns="http://www.imqs.co.za/assets"
+        xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+        elementFormDefault="unqualified"
+        attributeFormDefault="unqualified"
+        version="1.0">
+
+    <xsd:element name="CostOrderList">
+        <xsd:annotation>
+            <xsd:documentation>IMQS Asset Update Interface</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="CostOrders" type="CostOrder" minOccurs="0" maxOccurs="100000"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="CostOrder">
+        <xsd:annotation>
+            <xsd:documentation>
+                SAP Assets to Update in IMQS
+            </xsd:documentation>
+        </xsd:annotation>
+
+        <xsd:sequence>
+
+            <xsd:element name="OrderNr" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="1"/>
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="OrderType" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Capitalization date – IMQS take on date
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="4"/>
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="Description" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="2"/>
+                        <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="CreatedOn" nillable="false" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:date">
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="StartDate" nillable="false" minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:date">
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+
+            <xsd:element name="EndDate" nillable="false"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:date">
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="FunctionalLocation"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="3"/>
+                        <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="EquipmentNr"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="1"/>
+                        <xsd:maxLength value="18"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="AssetNr"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="1"/>
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="CostCenter"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="1"/>
+                        <xsd:maxLength value="10"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="Plant"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="4"/>
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="MaintCost"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="1"/>
+                        <xsd:maxLength value="17"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="SystemStatus"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="4"/>
+                        <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="ProblemCode"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="1"/>
+                        <xsd:maxLength value="8"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+
+            <xsd:element name="ProblemDescription"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="4"/>
+                        <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="CauseCode"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="1"/>
+                        <xsd:maxLength value="8"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="CauseDescription"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="5"/>
+                        <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="ActivityCode"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="2"/>
+                        <xsd:maxLength value="7"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="ActivityDescription"  minOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>
+
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="10"/>
+                        <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+        </xsd:sequence>
+
+    </xsd:complexType>
+
+
+
+</xsd:schema>

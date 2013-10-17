@@ -14,6 +14,7 @@
     <xsd:include schemaLocation="dismantle.xsd"/>
     <xsd:include schemaLocation="update.xsd"/>
     <xsd:include schemaLocation="adjustment.xsd"/>
+    <xsd:include schemaLocation="costorder.xsd"/>
 
     <xsd:element name="CreateResponse">
         <xsd:annotation>
