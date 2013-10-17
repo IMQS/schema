@@ -180,16 +180,15 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="MaintCost"  minOccurs="1">
+            <xsd:element name="MaintenanceCost"  minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>
 
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
-                    <xsd:restriction base="xsd:string">
-                        <xsd:minLength value="1"/>
-                        <xsd:maxLength value="17"/>
+                    <xsd:restriction base="xsd:decimal">
+                        <xsd:fractionDigits value="2"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
