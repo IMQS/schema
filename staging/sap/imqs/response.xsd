@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 		
+			jxb:version="2.0"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+			targetNamespace="http://www.imqs.co.za/response"
+            xmlns="http://www.imqs.co.za/error"
+            elementFormDefault="unqualified"
+            attributeFormDefault="unqualified"
+            version="1.0">
+
+    <xsd:element name="CreateResponse">
+        <xsd:annotation>
+            <xsd:documentation>Response </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Error" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation>Error message </xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="250"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
