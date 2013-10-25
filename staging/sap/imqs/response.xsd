@@ -4,7 +4,7 @@
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
 			targetNamespace="http://www.imqs.co.za"
-            xmlns="http://www.imqs.co.za/error"
+            xmlns="http://www.imqs.co.za"
             elementFormDefault="unqualified"
             attributeFormDefault="unqualified"
             version="1.0">
