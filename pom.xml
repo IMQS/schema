@@ -98,18 +98,6 @@
                         </configuration>
                     </execution>
 
-                    <execution>
-                        <phase>test</phase>
-                        <id>maintenance</id>
-                        <goals>
-                            <goal>xjc</goal>
-                        </goals>
-                        <configuration>
-                            <schemaDirectory>${project.basedir}/staging/sap/maintenance</schemaDirectory>
-                            <clearOutputDir>false</clearOutputDir>
-                            <staleFile>target/generated-sources/jaxb/.maint</staleFile>
-                        </configuration>
-                    </execution>
 
                 </executions>
 

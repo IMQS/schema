@@ -136,7 +136,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="ClientAssetId" minOccurs="1">
+            <xsd:element name="ClientAssetId" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
                         This data element uniquely identifies a batch of asset details submitted to SAP.
