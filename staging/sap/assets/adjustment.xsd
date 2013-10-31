@@ -44,7 +44,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="AssetCapitalisation" id="AKTIV"  minOccurs="1">
+            <xsd:element name="AssetCapitalisation" id="AKTIV"  minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
                         Capitalization date – IMQS take on date
@@ -70,7 +70,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="APCAmountSum" id="BTR1" nillable="false" minOccurs="1">
+            <xsd:element name="APCAmountSum" id="BTR1" nillable="false" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
 
@@ -83,21 +83,7 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="AdjustmentAmountSum" id="BTR2" nillable="false" minOccurs="1">
-                <xsd:annotation>
-                    <xsd:documentation>
-
-                    </xsd:documentation>
-                </xsd:annotation>
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:decimal">
-                        <xsd:fractionDigits value="2"/>
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
-
-
-            <xsd:element name="DepreciationAmountSum" id="BTR3" nillable="false"  minOccurs="1">
+            <xsd:element name="AdjustmentAmountSum" id="BTR2" nillable="false" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
 
@@ -155,8 +141,7 @@
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
-                        <xsd:minLength value="1"/>
-                        <xsd:maxLength value="12"/>
+                        <xsd:length value="12"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
@@ -173,48 +158,8 @@
                 </xsd:simpleType>
             </xsd:element>
 
-            <xsd:element name="ComponentId"  minOccurs="0">
-                <xsd:annotation>
-                    <xsd:documentation>
-                        Maps from the Sap Asset Description Field
-                    </xsd:documentation>
-                </xsd:annotation>
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:string">
-                        <xsd:minLength value="1"/>
-                        <xsd:maxLength value="50"/>
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
 
             <xsd:element name="PostDate" minOccurs="0">
-                <xsd:annotation>
-                    <xsd:documentation>
-
-                    </xsd:documentation>
-                </xsd:annotation>
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:date">
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
-
-            <xsd:element name="AssetTranType" minOccurs="0">
-                <xsd:annotation>
-                    <xsd:documentation>
-
-                    </xsd:documentation>
-                </xsd:annotation>
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:string">
-                        <xsd:minLength value="1"/>
-                        <xsd:maxLength value="3"/>
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
-
-
-            <xsd:element name="AssetValueDate" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
 
@@ -243,20 +188,6 @@
                 <xsd:annotation>
                     <xsd:documentation>
                         Transaction adjustment amount
-                    </xsd:documentation>
-                </xsd:annotation>
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:decimal">
-                        <xsd:fractionDigits value="2"/>
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
-
-
-            <xsd:element name="DepreciationAmount" nillable="false" minOccurs="0">
-                <xsd:annotation>
-                    <xsd:documentation>
-                        Depreciation amount of transaction
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>

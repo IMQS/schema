@@ -108,28 +108,10 @@
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
-                        <xsd:minLength value="1"/>
-                        <xsd:maxLength value="12"/>
+                        <xsd:length value="12"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
-
-
-            <xsd:element name="ComponentId" minOccurs="1">
-                <xsd:annotation>
-                    <xsd:documentation>
-                        Asset Description in SAP
-                    </xsd:documentation>
-                </xsd:annotation>
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:string">
-                        <xsd:minLength value="1"/>
-                        <xsd:maxLength value="50"/>
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
-
-
 
             <xsd:element name="AssetValueDate" minOccurs="1">
                 <xsd:annotation>

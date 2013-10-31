@@ -44,7 +44,7 @@
             </xsd:simpleType>
         </xsd:element>
 
-        <xsd:element name="AssetNumber"  minOccurs="0">
+        <xsd:element name="AssetNumber"  minOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                    This data element provides the newly created SAP asset number from SAP FI.
@@ -52,13 +52,12 @@
             </xsd:annotation>
             <xsd:simpleType>
                <xsd:restriction base="xsd:string">
-                  <xsd:maxLength value="12"/>
-                   <xsd:minLength value="1"/>
+                   <xsd:length value="12"/>
                </xsd:restriction>
             </xsd:simpleType>
         </xsd:element>
 
-        <xsd:element name="EquipNumber" minOccurs="0">
+        <xsd:element name="EquipNumber" minOccurs="1">
             <xsd:annotation>
                 <xsd:documentation>
                     This data element provides the newly created SAP equipment number from SAP PM.
@@ -66,8 +65,7 @@
             </xsd:annotation>
             <xsd:simpleType>
                 <xsd:restriction base="xsd:string">
-                    <xsd:maxLength value="18"/>
-                    <xsd:minLength value="1"/>
+                    <xsd:length value="18"/>
                 </xsd:restriction>
             </xsd:simpleType>
         </xsd:element>
