@@ -32,7 +32,8 @@
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
-                        <xsd:maxLength value="4"/>
+						<xsd:maxLength value="4"/>
+						<xsd:minLength value="1"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
