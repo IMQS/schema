@@ -27,7 +27,7 @@
             <xsd:sequence>
                 <xsd:element name="MessageType" minOccurs="1"  maxOccurs="1">
                     <xsd:simpleType>
-                        <xsd:restriction base="xsd:String">
+                        <xsd:restriction base="xsd:string">
 						<xsd:maxLength value="10"/>
 						<xsd:minLength value="1"/>
 						</xsd:restriction>
