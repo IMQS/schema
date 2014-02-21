@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema jxb:version="2.0"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+			targetNamespace="http://joburgwater.co.za/IMQS/WorkOrder"
+			xmlns="http://joburgwater.co.za/IMQS/WorkOrder" 
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			elementFormDefault="unqualified"
+			attributeFormDefault="unqualified"
+			version="1.0">
+			 
+	<xsd:element name="NewWorkOrderInstruction" type="NewWorkOrderInstructionType"/>
+	<xsd:complexType name="InstructionType">
+		<xsd:annotation>
+			<xsd:appinfo source="http://sap.com/xi/VersionID">9f288ecb2f3011e3b16d0000005ff7c6</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="equipmentNumber">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/TextID">bc5117182f3011e3b748c5acc0a86e2e</xsd:appinfo>
+					<xsd:documentation>Equipment Number</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="18"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="salesDocumentType">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/TextID">bc5117192f3011e3c30fc5acc0a86e2e</xsd:appinfo>
+					<xsd:documentation>Sales Document Type</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="4"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="NewWorkOrderInstructionType">
+		<xsd:annotation>
+			<xsd:appinfo source="http://sap.com/xi/VersionID">244c11832f3011e3cb110000005ff7c6</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="transmissionID">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/TextID">9475c45e2f2e11e38724c5acc0a86e2e</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:long">
+						<xsd:totalDigits value="12"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="instruction" type="InstructionType" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/TextID">9475c45f2f2e11e3b0afc5acc0a86e2e</xsd:appinfo>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
