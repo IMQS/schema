@@ -9,7 +9,7 @@
 			elementFormDefault="unqualified"
 			attributeFormDefault="unqualified"
 			version="1.0">
-			
+			 
 	<xsd:complexType name="WrkOrdStRequestType">
 		<xsd:sequence>
 			<xsd:element name="record">
