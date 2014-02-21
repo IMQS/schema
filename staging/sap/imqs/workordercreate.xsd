@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema jxb:version="2.0"
-			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 			xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
 			targetNamespace="http://joburgwater.co.za/IMQS/WorkOrder"
 			xmlns="http://joburgwater.co.za/IMQS/WorkOrder" 
