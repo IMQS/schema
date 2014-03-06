@@ -1,4 +1,4 @@
-<xsd:schema targetNamespace="http://joburgwater.co.za/IMQS/EquipmentWorkOrderStatus" xmlns="http://joburgwater.co.za/PlantMaintenance" xmlns="http://joburgwater.co.za/IMQS/EquipmentWorkOrderStatus" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema targetNamespace="http://joburgwater.co.za/IMQS/EquipmentWorkOrderStatus" xmlns="p:http://joburgwater.co.za/PlantMaintenance" xmlns="http://joburgwater.co.za/IMQS/EquipmentWorkOrderStatus" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:import namespace="http://joburgwater.co.za/PlantMaintenance"/>
     <xsd:element name="StatusNotRetrieved">
         <xsd:complexType>
@@ -7,7 +7,7 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-    <xsd:element name="EquipmentWorkOrderStatus" type="EquipmentWorkOrderStatusType"/>
+    <xsd:element name="EquipmentWorkOrderStatus" type="p:EquipmentWorkOrderStatusType"/>
     <xsd:complexType name="ExchangeFaultData">
         <xsd:annotation>
             <xsd:appinfo source="http://sap.com/xi/VersionID">d03272ab325f11e3cb220000005ff7c6</xsd:appinfo>
