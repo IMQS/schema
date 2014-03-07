@@ -1,4 +1,4 @@
-<xsd:schema targetNamespace="http://joburgwater.co.za/IMQS/EquipmentWorkOrderStatus" xmlns:p1="http://joburgwater.co.za/PlantMaintenance" xmlns="http://joburgwater.co.za/IMQS/EquipmentWorkOrderStatus" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xsd:schema targetNamespace="http://joburgwater.co.za/IMQS/EquipmentWorkOrderStatus" xmlns:p1="http://joburgwater.co.za/PlantMaintenance" xmlns="http://joburgwater.co.za/IMQS/EquipmentWorkOrderStatus" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:import namespace="http://joburgwater.co.za/PlantMaintenance" schemaLocation="./workorderspull.xsd"/>
     <xsd:element name="StatusNotRetrieved">
         <xsd:complexType>
