@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        jxb:version="2.0"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.imqs.co.za/assets"
+        xmlns="http://www.joburgwater.co.za/workorders"
+        xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+        elementFormDefault="unqualified"
+        attributeFormDefault="unqualified"
+        version="1.0">
+
+    <xsd:include schemaLocation="workorderspull.xsd"/>
+    <xsd:include schemaLocation="workorderstatus.xsd"/>
+    <xsd:include schemaLocation="workorderscreate.xsd"/>
+
+</xsd:schema>
