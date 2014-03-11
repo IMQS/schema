@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema targetNamespace="http://joburgwater.co.za/PlantMaintenance" xmlns="http://joburgwater.co.za/PlantMaintenance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xsd:schema targetNamespace="http://joburgwater.co.za/PlantMaintenance" xmlns="http://joburgwater.co.za/PlantMaintenance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:complexType name="WrkOrdStRequestType">
         <xsd:annotation>
             <xsd:appinfo source="http://sap.com/xi/VersionID">9ea2d8dd46eb11e3b9a30000005ff7c6</xsd:appinfo>
