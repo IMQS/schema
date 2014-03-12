@@ -9,8 +9,6 @@
         attributeFormDefault="unqualified"
         version="1.0">
 
-    <xsd:include schemaLocation="workorderspull.xsd"/>
-    <xsd:include schemaLocation="workorderstatus.xsd"/>
-    <xsd:include schemaLocation="workorderscreate.xsd"/>
+    <xsd:include schemaLocation="workorderstatusrequest.xsd"/>
 
 </xsd:schema>
