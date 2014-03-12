@@ -1,37 +1,5 @@
 <xsd:schema targetNamespace="http://joburgwater.co.za/workorders" xmlns="http://joburgwater.co.za/workorders" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
-    <xsd:element name="StatusNotRetrieved">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="standard" type="ExchangeFaultData"/>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-
-    <xsd:element name="EquipmentWorkOrderStatus" type="EquipmentWorkOrderStatusType"/>
-
-    <xsd:complexType name="ExchangeFaultData">
-        <xsd:annotation>
-            <xsd:appinfo source="http://sap.com/xi/VersionID">d03272ab325f11e3cb220000005ff7c6</xsd:appinfo>
-        </xsd:annotation>
-        <xsd:sequence>
-            <xsd:element name="faultText" type="xsd:string"/>
-            <xsd:element name="faultUrl" type="xsd:string" minOccurs="0"/>
-            <xsd:element name="faultDetail" type="ExchangeLogData" minOccurs="0" maxOccurs="unbounded"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ExchangeLogData">
-        <xsd:annotation>
-            <xsd:appinfo source="http://sap.com/xi/VersionID">d04ebcb0325f11e3894a0000005ff7c6</xsd:appinfo>
-        </xsd:annotation>
-        <xsd:sequence>
-            <xsd:element name="severity" type="xsd:string" minOccurs="0"/>
-            <xsd:element name="text" type="xsd:string"/>
-            <xsd:element name="url" type="xsd:string" minOccurs="0"/>
-            <xsd:element name="id" type="xsd:string" minOccurs="0"/>
-        </xsd:sequence>
-    </xsd:complexType>
-
     <xsd:complexType name="StatusType">
         <xsd:annotation>
             <xsd:appinfo source="http://sap.com/xi/VersionID">aea5f9d046ee11e3b8d30000005ff7c6</xsd:appinfo>
@@ -320,5 +288,38 @@
             </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
+
+    <xsd:element name="StatusNotRetrieved">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="standard" type="ExchangeFaultData"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="EquipmentWorkOrderStatus" type="EquipmentWorkOrderStatusType"/>
+
+    <xsd:complexType name="ExchangeFaultData">
+        <xsd:annotation>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">d03272ab325f11e3cb220000005ff7c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="faultText" type="xsd:string"/>
+            <xsd:element name="faultUrl" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="faultDetail" type="ExchangeLogData" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ExchangeLogData">
+        <xsd:annotation>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">d04ebcb0325f11e3894a0000005ff7c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="severity" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="text" type="xsd:string"/>
+            <xsd:element name="url" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="id" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
 
 </xsd:schema>
