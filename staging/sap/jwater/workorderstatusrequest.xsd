@@ -1,4 +1,4 @@
-<xsd:schema targetNamespace="http://joburgwater.co.za/workorders" xmlns="http://joburgwater.co.za/workorders" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema targetNamespace="http://joburgwater.co.za/workorders" xmlns="http://joburgwater.co.za/workorders" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
     <xsd:element name="StatusNotRetrieved">
         <xsd:complexType>
