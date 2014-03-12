@@ -1,7 +1,5 @@
 <xsd:schema targetNamespace="http://joburgwater.co.za/workorders" xmlns="http://joburgwater.co.za/workorders" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
-    <xsd:element name="EquipmentWorkOrderStatus" type="EquipmentWorkOrderStatusType"/>
-
     <xsd:element name="StatusNotRetrieved">
         <xsd:complexType>
             <xsd:sequence>
@@ -9,6 +7,8 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
+    <xsd:element name="EquipmentWorkOrderStatus" type="EquipmentWorkOrderStatusType"/>
 
     <xsd:complexType name="ExchangeFaultData">
         <xsd:annotation>
