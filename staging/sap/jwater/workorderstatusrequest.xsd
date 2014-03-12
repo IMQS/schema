@@ -132,6 +132,7 @@
             </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
+
     <xsd:complexType name="WrkOrdStResponseType">
         <xsd:annotation>
             <xsd:appinfo source="http://sap.com/xi/VersionID">8ac1799d478811e3b4150000005ff7c6</xsd:appinfo>
@@ -289,13 +290,13 @@
         </xsd:sequence>
     </xsd:complexType>
 
-    <xsd:element name="StatusNotRetrieved">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="standard" type="ExchangeFaultData"/>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
+    <!--<xsd:element name="StatusNotRetrieved">-->
+        <!--<xsd:complexType>-->
+            <!--<xsd:sequence>-->
+                <!--<xsd:element name="standard" type="ExchangeFaultData"/>-->
+            <!--</xsd:sequence>-->
+        <!--</xsd:complexType>-->
+    <!--</xsd:element>-->
 
     <xsd:element name="EquipmentWorkOrderStatus" type="EquipmentWorkOrderStatusType"/>
 
