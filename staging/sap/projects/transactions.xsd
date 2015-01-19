@@ -217,6 +217,96 @@
                 </xsd:simpleType>
             </xsd:element>
 
+            <xsd:element id="AUFNR" name="OrderNumber" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>PM Order Number</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element id="ZZXBLNR" name="InvoiceNumber" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Only used when paying a vendor - supplier's invoice number</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="16"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element id="ZZSTTXT" name="ObjectStatus" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Object Status, going into partial capitalisation. This status will determine whether the transaction is done</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element id="ZZERFMG" name="Quantity" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Quantity</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                        <xsd:totalDigits value="13"/>
+                        <xsd:fractionDigits value="3"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element id="ZZERFME" name="UnitOfMeasure" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Unit Of Measure</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="3"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element id="ZZMATNR" name="MaterialNumber" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Material Number</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="18"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element id="ZZMAKTX" name="MaterialDescription" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Material Description</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element id="ZZTXT20_ML" name="OffSettingAccount" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>GL off setting accounts. E.g. 'Capital Spares' – indicates what type of stock it is</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="50"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+
             <xsd:element name="CostElement" minOccurs="0" type="Cost"/>
 
             <xsd:element name="Vendor" minOccurs="0" type="Vendor"/>
