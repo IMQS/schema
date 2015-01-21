@@ -118,6 +118,7 @@
                 </xsd:annotation>
             </xsd:element>
 
+
         </xsd:sequence>
 
     </xsd:complexType>
@@ -193,6 +194,32 @@
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:decimal">
                         <xsd:fractionDigits value="2"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="RULYear" id="NDJAR" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Remaining Useful Life in years
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:integer">
+                        <xsd:totalDigits value="3"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="RULMonths" id="NDPER" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Remaining Useful Life in months
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:integer">
+                        <xsd:totalDigits value="3"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
