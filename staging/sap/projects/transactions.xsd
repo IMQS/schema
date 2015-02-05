@@ -219,7 +219,7 @@
 
             <xsd:element id="AUFNR" name="OrderNumber" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation>PM Order Number</xsd:documentation>
+                    <xsd:documentation>PM Order Number. Assists with grouping together costs - event collector - e.g. a meter installation. One work order per capital item(e.g. meter installation) </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
@@ -230,7 +230,7 @@
 
             <xsd:element id="ZZXBLNR" name="InvoiceNumber" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation>Only used when paying a vendor - supplier's invoice number</xsd:documentation>
+                    <xsd:documentation>Only used when paying a vendor - supplier's invoice number. No invoice number for goods issued, journals, labour. Only when paying a vendor.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
@@ -241,7 +241,7 @@
 
             <xsd:element id="ZZSTTXT" name="ObjectStatus" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation>Object Status, going into partial capitalisation. This status will determine whether the transaction is done</xsd:documentation>
+                    <xsd:documentation>Object Status, going into partial capitalisation. This status will determine whether the transaction is done. Will be a concatenated string. Can only use invoices with TECO status ->this status only matters when Order Number is populated. Only look at first 4 charters. Note: SAP can unfortunately not only send invoices to type TECO, as IMQS will not know if more invoices are coming for a transaction group.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
@@ -252,7 +252,7 @@
 
             <xsd:element id="ZZERFMG" name="Quantity" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation>Quantity</xsd:documentation>
+                    <xsd:documentation>The amount of material types issued to PM Order or received onto the project E.g. 5</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:decimal">
@@ -264,7 +264,7 @@
 
             <xsd:element id="ZZERFME" name="UnitOfMeasure" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation>Unit Of Measure</xsd:documentation>
+                    <xsd:documentation>Unit Of Measure relates to quantity . E.g. m(meters)</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
@@ -275,7 +275,7 @@
 
             <xsd:element id="ZZMATNR" name="MaterialNumber" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation>Material Number</xsd:documentation>
+                    <xsd:documentation>Material Number- SAP code for material description</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
@@ -286,7 +286,7 @@
 
             <xsd:element id="ZZMAKTX" name="MaterialDescription" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation>Material Description</xsd:documentation>
+                    <xsd:documentation>The description of the material that was issued/received against the project - e.g. Meter: 25mm diameter</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
@@ -297,7 +297,7 @@
 
             <xsd:element id="ZZTXT20_ML" name="OffSettingAccount" minOccurs="0">
                 <xsd:annotation>
-                    <xsd:documentation>GL off setting accounts. E.g. 'Capital Spares' – indicates what type of stock it is</xsd:documentation>
+                    <xsd:documentation>GL off setting account description. E.g. 'Capital Spares' – indicates what type of stock it is. The offsetting account description is a 50 character test description of the account that received the credit when the project was debited - free text field.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
