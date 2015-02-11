@@ -82,6 +82,159 @@
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
+			
+			<xsd:element id="EQTYP" name="EquipmentCategory"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					This is the Equipment category description 4 categories: Waste Water; Networks, ect. Sounds like IMQS Asset Sub Category * Ask SAP to rather send the category description instead of the code
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+					<xsd:minLength value="0"/>
+                    <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+			
+			<xsd:element id="EQART" name="ObjectType"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					This will relate back to the IMQS component type. Examples here are: pipe, meter, etc. Sounds like IMQS Component Type
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+					<xsd:minLength value="0"/>
+                    <xsd:maxLength value="10"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+						
+            <xsd:element id="INBDT" name="StartDate"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					Equipment take on date (YYYY-MM-DD)
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:date">
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+			<xsd:element id="SERGE" name="SerialNumber"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					Manufacture's Serial Number
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+					<xsd:minLength value="0"/>
+                    <xsd:maxLength value="30"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+			
+			<xsd:element id="SWERK" name="MaintenancePlant"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					Plant to which equipment belongs
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+					<xsd:minLength value="0"/>
+                    <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+			
+			<xsd:element id="KOSTL" name="CostCentre"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					Cost centre to which equipment belongs
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+					<xsd:minLength value="0"/>
+                    <xsd:maxLength value="10"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+			
+			<xsd:element id="GEWRK" name="WorkCentre"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					Object ID of Work Centre
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+					<xsd:minLength value="0"/>
+                    <xsd:maxLength value="8"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+			
+			<xsd:element id="WERGW" name="PlantWorkCentre"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					Plant associated with work centre
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+					<xsd:minLength value="0"/>
+                    <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+			
+			<xsd:element id="Z_AUFNR" name="WorkOrderNr"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					Work order which potentially created equipment
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+					<xsd:minLength value="0"/>
+                    <xsd:maxLength value="30"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+			
+			<xsd:element id="Z_PSPID" name="ProjectNr"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					Project from which the equipment must be capitalized from. Will only components which have a Project Nr be part of partial capitalization?
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+					<xsd:minLength value="0"/>
+                    <xsd:maxLength value="30"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+			
+			<xsd:element id="ANLNR" name="AssetNumber"  minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+					This data element provides the newly created SAP asset number from SAP FI
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+					<xsd:minLength value="0"/>
+                    <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
 
 
         </xsd:sequence>
