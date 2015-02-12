@@ -86,7 +86,7 @@
 			<xsd:element id="EQTYP" name="EquipmentCategory"  minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
-					This is the Equipment category description 4 categories: Waste Water; Networks, ect. Sounds like IMQS Asset Sub Category * Ask SAP to rather send the category description instead of the code
+					This is the Equipment category description 4 categories: Waste Water; Networks, ect. Sounds like IMQS Asset Sub Category 
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
@@ -210,7 +210,7 @@
 			<xsd:element id="Z_PSPID" name="ProjectNr"  minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
-					Project from which the equipment must be capitalized from. Will only components which have a Project Nr be part of partial capitalization?
+					Project from which the equipment must be capitalized from.
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
