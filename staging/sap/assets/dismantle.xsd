@@ -23,7 +23,7 @@
     <xsd:complexType name="DismantleEquip">
         <xsd:annotation>
             <xsd:documentation>
-                SAP De-recognitions to Update in IMQS
+             SAP De-recognitions to Update in IMQS
             </xsd:documentation>
         </xsd:annotation>
 
@@ -32,7 +32,7 @@
             <xsd:element name="EquipmentNr"  minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>
-                        In IM
+                     This data element provides SAP equipment number from SAP PM
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
@@ -46,7 +46,7 @@
             <xsd:element name="Description"  minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>
-
+					 This is general free text description 
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
@@ -60,7 +60,7 @@
             <xsd:element name="Date"  minOccurs="1">
                 <xsd:annotation>
                     <xsd:documentation>
-
+					 This is the date the change in equipment occurred
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
@@ -72,7 +72,7 @@
             <xsd:element name="FunctionalLocation"  minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
-
+					 This is the current functional location of the equipment
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
@@ -86,7 +86,7 @@
 			<xsd:element id="EQTYP" name="EquipmentCategory"  minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
-					This is the Equipment category description four categories: Waste Water; Networks etc.
+					This is the Equipment category description which contains four categories: Waste Water; Networks etc.
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
@@ -235,11 +235,8 @@
                 </xsd:simpleType>
             </xsd:element>
 
-
-
         </xsd:sequence>
 
     </xsd:complexType>
-
 
 </xsd:schema>
