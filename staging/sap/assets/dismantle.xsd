@@ -23,7 +23,7 @@
     <xsd:complexType name="DismantleEquip">
         <xsd:annotation>
             <xsd:documentation>
-             SAP De-recognitions to Update in IMQS
+             SAP Dismantle to Update in IMQS
             </xsd:documentation>
         </xsd:annotation>
 
