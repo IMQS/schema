@@ -86,7 +86,7 @@
 			<xsd:element id="EQTYP" name="EquipmentCategory"  minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
-					This is the Equipment category description 4 categories: Waste Water; Networks, ect. Sounds like IMQS Asset Sub Category 
+					This is the Equipment category description four categories: Waste Water; Networks etc.
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
@@ -100,7 +100,7 @@
 			<xsd:element id="EQART" name="ObjectType"  minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>
-					This will relate back to the IMQS component type. Examples here are: pipe, meter, etc. Sounds like IMQS Component Type
+					This is the type of equipment, as described by SAP. Examples here are: pipe, meter etc. 
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
