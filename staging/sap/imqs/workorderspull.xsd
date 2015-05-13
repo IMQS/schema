@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.imqs.co.za/workorderstatus"
+            xmlns="http://www.imqs.co.za/workorderstatus"
+            xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+            elementFormDefault="unqualified"
+            attributeFormDefault="unqualified"
+            version="1.0">
+
+    <xsd:element name="EquipmentWorkOrderStatusType" type="EquipmentWorkOrderStatusType"/>
+
+	<xsd:complexType name="WrkOrdStRequestType">
+        <xsd:annotation>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">9ea2d8dd46eb11e3b9a30000005ff7c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="record">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1ea8751f29cf11e3c996d2eac0a86e2e</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="dateFrom" type="xsd:date" minOccurs="0">
+                            <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">a087697c416511e396d3f1000a003384</xsd:appinfo>
+                                <xsd:documentation>From Date</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element name="dateTo" type="xsd:date" minOccurs="0">
+                            <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">a087697d416511e3997af1000a003384</xsd:appinfo>
+                                <xsd:documentation>To Date</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element name="equipments">
+                            <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">ae3868cc46ee11e3ccb4e5ee0a003384</xsd:appinfo>
+                            </xsd:annotation>
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="equipmentNumber" maxOccurs="unbounded">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">c3a34cdd46eb11e38648e5ee0a003384</xsd:appinfo>
+                                            <xsd:documentation>Equipment Number</xsd:documentation>
+                                        </xsd:annotation>
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="18"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="statuses" type="StatusType" minOccurs="0">
+                            <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">ccd53a9d416811e38ba5f1000a003384</xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MessageType">
+        <xsd:annotation>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">7b39a66e46ec11e3c3fe0000005ff7c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="msgType">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c7dbb32b325c11e39055c7cdc0a86e2e</xsd:appinfo>
+                    <xsd:documentation>S=Success, I=Information, A=Cancel, E=Error, W=Warning</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="1"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="equipmentNumber">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a057209a46ec11e38d97e5ee0a003384</xsd:appinfo>
+                    <xsd:documentation>Equipment Number in the request message</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="18"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="message" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c7dbb32c325c11e39e8fc7cdc0a86e2e</xsd:appinfo>
+                    <xsd:documentation>Description (Feedback)</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="100"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="WrkOrdStResponseType">
+        <xsd:annotation>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">8ac1799d478811e3b4150000005ff7c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="messages">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c0fb368546ec11e3cdb6e5ee0a003384</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="message" type="MessageType" minOccurs="0" maxOccurs="unbounded">
+                            <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">c0fb368446ec11e3be68e5ee0a003384</xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="records" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8fab750846fc11e3c5d1e5ee0a003384</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="record" minOccurs="0" maxOccurs="unbounded">
+                            <xsd:annotation>
+                                <xsd:appinfo source="http://sap.com/xi/TextID">9596704429d011e3b9e1d2eac0a86e2e</xsd:appinfo>
+                            </xsd:annotation>
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="orderNumber">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7b3a4cf3414611e3ad96f1000a003384</xsd:appinfo>
+                                            <xsd:documentation>Order Number</xsd:documentation>
+                                        </xsd:annotation>
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="12"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="orderType">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c70d47f29d011e38010d2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>PM Order Type</xsd:documentation>
+                                        </xsd:annotation>
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="4"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="description" minOccurs="0">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c70d48029d011e3b5a4d2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>Description</xsd:documentation>
+                                        </xsd:annotation>
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="40"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="dateCreated" type="xsd:date">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c70d48129d011e3b82dd2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>Date on which equipment was created</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="startDate" type="xsd:date">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c70d48229d011e3b6cdd2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>Basic Start Date</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="finishDate" type="xsd:date">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c70d48329d011e384cdd2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>Basic Finish Date</xsd:documentation>
+                                        </xsd:annotation>
+                                    </xsd:element>
+                                    <xsd:element name="equipmentNumber">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c70d48429d011e3c046d2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>Equipment Number</xsd:documentation>
+                                        </xsd:annotation>
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="18"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="functionalLocation" minOccurs="0">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c70d48529d011e39dcfd2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>Functional Location</xsd:documentation>
+                                        </xsd:annotation>
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="30"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="costCentre" minOccurs="0">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c70d48629d011e3c30ed2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>Responsible Cost Centre</xsd:documentation>
+                                        </xsd:annotation>
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="10"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="asset" minOccurs="0">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c70d48729d011e3b59ed2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>Asset</xsd:documentation>
+                                        </xsd:annotation>
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="12"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="plant">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c71065f29d011e3b559d2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>Maintenance Planning Plant</xsd:documentation>
+                                        </xsd:annotation>
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="4"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                    <xsd:element name="systemStatus" minOccurs="0">
+                                        <xsd:annotation>
+                                            <xsd:appinfo source="http://sap.com/xi/TextID">7c71066029d011e3a6f5d2eac0a86e2e</xsd:appinfo>
+                                            <xsd:documentation>System Status</xsd:documentation>
+                                        </xsd:annotation>
+                                        <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                                <xsd:maxLength value="40"/>
+                                            </xsd:restriction>
+                                        </xsd:simpleType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="StatusType">
+        <xsd:annotation>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">aea5f9d046ee11e3b8d30000005ff7c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="status" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">babdf025416811e3cb28f1000a003384</xsd:appinfo>
+                    <xsd:documentation>Equipment Status</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="40"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="EquipmentWorkOrderStatusType">
+        <xsd:annotation>
+            <xsd:appinfo source="http://sap.com/xi/VersionID">fddc242a470211e3c4ec0000005ff7c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="request" type="WrkOrdStRequestType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">55c1af9029d111e3a519d2eac0a86e2e</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="response" type="WrkOrdStResponseType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">55c1af9129d111e3bbfcd2eac0a86e2e</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
