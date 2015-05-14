@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xsd:schema targetNamespace="http://www.imqs.co.za/workorderstatus" 
+	xmlns="http://www.imqs.co.za/workorderstatus"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	elementFormDefault="unqualified"
+    attributeFormDefault="unqualified"
+    version="1.0">
+
+    <xsd:include schemaLocation="workorderspull.xsd"/>
+
+</xsd:schema>
